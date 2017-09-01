@@ -1,0 +1,35 @@
+{% comment %}
+  Assign `grid_item_width` depending on the size and orientation of
+  product images. Same as collection template.
+{% endcomment %}
+{% if product_image_type == 'portrait' %}
+  {% case product_image_size %}
+    {% when 'small' %}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-sixth' -%}
+      {%- assign image_size = 'x440' -%}
+    {% when 'medium' %}
+      {%- assign grid_item_width = 'small--one-half medium--one-third large-up--one-quarter' -%}
+      {%- assign image_size = 'x640' -%}
+    {% when 'large' %}
+      {%- assign grid_item_width = 'medium-up--one-third' -%}
+      {%- assign image_size = 'x840' -%}
+    {% when 'xlarge' %}
+      {%- assign grid_item_width = '' -%}
+      {%- assign image_size = 'x1024' -%}
+  {% endcase %}
+{% elsif product_image_type == 'landscape' %}
+  {% case product_image_size %}
+    {% when 'small' %}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+      {%- assign image_size = '440x' -%}
+    {% when 'medium' %}
+      {%- assign grid_item_width = 'medium-up--one-third' -%}
+      {%- assign image_size = '640x' -%}
+    {% when 'large' %}
+      {%- assign grid_item_width = 'medium-up--one-half' -%}
+      {%- assign image_size = '840x' -%}
+    {% when 'xlarge' %}
+      {%- assign grid_item_width = '' -%}
+      {%- assign image_size = '1024x' -%}
+  {% endcase %}
+{% endif %}
