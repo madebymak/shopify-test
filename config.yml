@@ -1,0 +1,25 @@
+development:
+  password: 5cd756c75ffc31fd9acaf3602a2f96bc
+  theme_id: "197441348"
+  store: jmak-test.myshopify.com
+  bucket_size: 40
+  refill_rate: 2
+  timeout: 300s
+  ignore_files:
+  -  theme.lock
+  -  Thumbs.db
+  -  .git
+  -  .gitignore
+
+  production:
+    password: 5cd756c75ffc31fd9acaf3602a2f96bc
+    theme_id: "183935620"
+    store: jmak-test.myshopify.com
+    bucket_size: 40
+    refill_rate: 2
+    timeout: 300s
+    ignore_files:
+    -  theme.lock
+    -  Thumbs.db
+    -  .git
+    -  .gitignore
